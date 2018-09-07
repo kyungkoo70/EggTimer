@@ -16,11 +16,29 @@ class ViewController: NSViewController {
     @IBOutlet weak var stopButton: NSButtonCell!
     @IBOutlet weak var resetButton: NSButton!
     
-    @IBAction func startButtonClicked(_ sender: Any) {
+    @IBAction func startButtonClicked(_ sender: Any)
+    {
+        if eggTimer.isPaused
+        {
+            eggTimer.resumeTimer()
+        }
+        else
+        {
+            eggTimer.duration = 360
+            eggTimer.startTimer()
+        }
+        configureButtonsAndMenus()
     }
-    @IBAction func stopButtonClicked(_ sender: Any) {
+    @IBAction func stopButtonClicked(_ sender: Any)
+    {
+        eggTimer.stopTimer()
+        configureButtonsAndMenus()
     }
-    @IBAction func resetButtonClicked(_ sender: Any) {
+    @IBAction func resetButtonClicked(_ sender: Any)
+    {
+        eggTimer.resumeTimer()
+        updateDisplay(for: 360)
+        configureButtonsAndMenus()
     }
     
     // MARK: - IBActions - menus
@@ -112,6 +130,43 @@ extension ViewController
         }
         return NSImage(named: NSImage.Name(rawValue: imageName))
     }
+    
+    func configureButtonsAndMenus()
+    {
+        let enableStart: Bool
+        let enableStop: Bool
+        let enableReset: Bool
+        
+        if eggTimer.isStopped
+        {
+            enableStart = true
+            enableStop = false
+            enableReset = false
+        }
+        else if eggTimer.isPaused
+        {
+            enableStart = true
+            enableStop = false
+            enableReset = true
+        }
+        else
+        {
+            enableStart = false
+            enableStop = false
+            enableReset = false
+        }
+        
+        startButton.isEnabled = enableStart
+        stopButton.isEnabled = enableStop
+        resetButton.isEnabled = enableReset
+        
+        if let appDel = NSApplication.shared.delegate as? AppDelegate
+        {
+            appDel.enableMenus(start: enableStart, stop:enableStop, reset: enableReset)
+        }
+        
+    }
+    
 }
 
 
