@@ -13,6 +13,8 @@
 		58124D812140C5C700031BC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58124D7F2140C5C700031BC6 /* Main.storyboard */; };
 		58124D8A2140D5D400031BC6 /* PrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58124D892140D5D400031BC6 /* PrefsViewController.swift */; };
 		58124D8F2140E07E00031BC6 /* EggTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58124D8E2140E07E00031BC6 /* EggTimer.swift */; };
+		E74077E52142159200C9014F /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74077E42142159200C9014F /* Preferences.swift */; };
+		E74077E72142244B00C9014F /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E74077E62142244B00C9014F /* ding.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		58124D832140C5C700031BC6 /* EggTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EggTimer.entitlements; sourceTree = "<group>"; };
 		58124D892140D5D400031BC6 /* PrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsViewController.swift; sourceTree = "<group>"; };
 		58124D8E2140E07E00031BC6 /* EggTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimer.swift; sourceTree = "<group>"; };
+		E74077E42142159200C9014F /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		E74077E62142244B00C9014F /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 				58124D792140C5C600031BC6 /* AppDelegate.swift */,
 				58124D7D2140C5C700031BC6 /* Assets.xcassets */,
 				58124D7F2140C5C700031BC6 /* Main.storyboard */,
+				E74077E62142244B00C9014F /* ding.mp3 */,
 				58124D912140E15300031BC6 /* SupportingFiles */,
 			);
 			path = EggTimer;
@@ -89,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				58124D8E2140E07E00031BC6 /* EggTimer.swift */,
+				E74077E42142159200C9014F /* Preferences.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -153,6 +159,7 @@
 			files = (
 				58124D7E2140C5C700031BC6 /* Assets.xcassets in Resources */,
 				58124D812140C5C700031BC6 /* Main.storyboard in Resources */,
+				E74077E72142244B00C9014F /* ding.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +172,7 @@
 			files = (
 				58124D7C2140C5C600031BC6 /* ViewController.swift in Sources */,
 				58124D8F2140E07E00031BC6 /* EggTimer.swift in Sources */,
+				E74077E52142159200C9014F /* Preferences.swift in Sources */,
 				58124D8A2140D5D400031BC6 /* PrefsViewController.swift in Sources */,
 				58124D7A2140C5C600031BC6 /* AppDelegate.swift in Sources */,
 			);
