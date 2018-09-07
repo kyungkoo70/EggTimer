@@ -60,9 +60,9 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Timer" enabled="NO" id="EsH-iU-VLv">
+                            <menuItem title="Timer" id="EsH-iU-VLv">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Timer" id="NvD-cR-iQf">
+                                <menu key="submenu" title="Timer" autoenablesItems="NO" id="NvD-cR-iQf">
                                     <items>
                                         <menuItem title="Start" enabled="NO" keyEquivalent="s" id="JOH-ad-ObX">
                                             <connections>

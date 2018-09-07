@@ -152,7 +152,7 @@ extension ViewController
         else
         {
             enableStart = false
-            enableStop = false
+            enableStop = true
             enableReset = false
         }
         
